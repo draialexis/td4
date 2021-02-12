@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 #define C 5
 
 //ex1
@@ -67,6 +68,18 @@ void initTab2D(int tab[][100], int l) {
     }
 }
 
+//ex5
+int chercheFloat2D(float cible, float tab[][C], int l) {
+    for (int i = 0; i < l; ++i) {
+        for (int j = 0; j < C; ++j) {
+            if (tab[i][j] == cible) {
+                printf("tab[%d][%d]\n", i, j);
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
 
 int main() {
     //ex1
@@ -137,9 +150,17 @@ int main() {
     plusGrandDesDeuxV2(tab3, tab4, tab5, 4);
     afficheTabF(tab5);
 
+    //ex4
     int tab6[10][100];
     printf("\n");
     initTab2D(tab6, 10);
     afficheTab100(tab6);
+
+    //ex5
+    float target1 = 6;
+    float target2 = 7;
+    printf("is %f in tab3? %d\n", target1, chercheFloat2D(target1, tab3, 4));
+    printf("is %f in tab3? %d\n", target2, chercheFloat2D(target2, tab3, 4));
+
     return 0;
 }
