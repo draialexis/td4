@@ -1,10 +1,20 @@
 #include <stdio.h>
 #include <string.h>
+#define C 5
 
 //ex1
 void afficheTab(int tab[5][7]) {
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 7; ++j) {
+            printf("[%d] ", tab[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void afficheTab100(int tab[10][100]) {
+    for (int i = 0; i < 10; ++i) {
+        for (int j = 0; j < 100; ++j) {
             printf("[%d] ", tab[i][j]);
         }
         printf("\n");
@@ -39,6 +49,7 @@ void plusGrandDesDeuxV1(float t1[][5], float t2[][5], float t3[][5], int n) {
         }
     }
 }
+
 void plusGrandDesDeuxV2(float t1[][5], float t2[][5], float t3[][5], int n) {
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < 5; ++j) {
@@ -46,6 +57,16 @@ void plusGrandDesDeuxV2(float t1[][5], float t2[][5], float t3[][5], int n) {
         }
     }
 }
+
+//ex4
+void initTab2D(int tab[][100], int l) {
+    for (int i = 0; i < l; ++i) {
+        for (int j = 0; j < 100; ++j) {
+            tab[i][j] = (i * 100) + j;
+        }
+    }
+}
+
 
 int main() {
     //ex1
@@ -116,5 +137,9 @@ int main() {
     plusGrandDesDeuxV2(tab3, tab4, tab5, 4);
     afficheTabF(tab5);
 
+    int tab6[10][100];
+    printf("\n");
+    initTab2D(tab6, 10);
+    afficheTab100(tab6);
     return 0;
 }
