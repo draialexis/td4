@@ -179,5 +179,12 @@ int main() {
 
     printf("This should be 5: %d\n", nbStudentsBetweenXandY(tab7, 'B', 'F', 12));
 
+    //ex7
+    //Cf my https://github.com/draialexis/tp4bonus
+    //Also Cf https://code.woboq.org/userspace/glibc/string/strcat.c.html
+    //Also Cf https://code.woboq.org/userspace/glibc/string/strcpy.c.html
+    //Also Cf https://code.woboq.org/userspace/glibc/string/strcmp.c.html
+    //Also Cf https://code.woboq.org/userspace/glibc/string/strlen.c.html
+
     return 0;
 }
