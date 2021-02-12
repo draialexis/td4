@@ -81,6 +81,17 @@ int chercheFloat2D(float cible, float tab[][C], int l) {
     return 0;
 }
 
+//ex6
+int nbStudentsBetweenXandY(char *tab[], char begin, char end, int l) {
+    int counter = 0;
+    for (int i = 0; i < l; ++i) {
+        if ((tab[i][0] >= begin) && (tab[i][0] <= end)) {
+            ++counter;
+        }
+    }
+    return counter;
+}
+
 int main() {
     //ex1
     //a)
@@ -161,6 +172,12 @@ int main() {
     float target2 = 7;
     printf("is %f in tab3? %d\n", target1, chercheFloat2D(target1, tab3, 4));
     printf("is %f in tab3? %d\n", target2, chercheFloat2D(target2, tab3, 4));
+
+    //ex6
+    char *tab7[] = {"Aefdoihj", "Befdoihj", "Cefdoihj", "Eefdoihj", "Gefdoihj", "Refdoihj", "Zefdoihj", "Xefdoihj",
+                    "Defdoihj", "Fefdoihj", "Mefdoihj", "Qefdoihj"};
+
+    printf("This should be 5: %d\n", nbStudentsBetweenXandY(tab7, 'B', 'F', 12));
 
     return 0;
 }
